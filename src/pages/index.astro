@@ -1,11 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ThreeDModal from "../Three/Three";
+import Cursor from "../Three/Cursor";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html>
+  <head>
+    <title>3D Website</title>
+  </head>
+  <body>
+    <h1>Welcome to my 3D website</h1>
+    <div class="cursor">
+      <Cursor client:load />
+    </div>
+    <div id="three-container">
+      <ThreeDModal client:load />
+    </div>
+  </body>
+</html>
+
+<style>
+  h1 {
+    color: red;
+    text-align: center;
+  }
+
+  .cursor {
+    background-color: red;
+  }
+</style>
