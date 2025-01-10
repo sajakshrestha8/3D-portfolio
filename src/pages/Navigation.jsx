@@ -1,5 +1,5 @@
 import Logo from "../assets/logo-js-svgrepo-com";
-import AnimatedQuote from "../Three/AnimatedText/AnimatedQuote/AnimatedQuote";
+import AnimatedQuote from "../Three/AnimatedQuote/AnimatedQuote";
 
 const Navigation = () => {
   return (

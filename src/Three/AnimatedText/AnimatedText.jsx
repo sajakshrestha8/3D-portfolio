@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import "./AnimatedText.css";
 import CrossIcon from "../../assets/plus-a-svgrepo-com";
+// import TextPlugin from "gsap/TextPlugin";
 
 export default function AnimatedText(props) {
   const Letter = ({ space, letter }) => {
@@ -96,7 +97,7 @@ const Styles = {
     justifyContent: "center",
   },
   letter: {
-    fontSize: 164,
+    fontSize: 148,
     color: "black",
     fontWeight: "bold",
   },
