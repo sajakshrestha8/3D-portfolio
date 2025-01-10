@@ -1,6 +1,8 @@
 ---
 import ThreeDModal from "../Three/Three";
 import Cursor from "../Three/Cursor";
+import AnimatedText from "../Three/AnimatedText/AnimatedText";
+import Navigation from "./Navigation";
 ---
 
 <html>
@@ -8,9 +10,14 @@ import Cursor from "../Three/Cursor";
     <title>3D Website</title>
   </head>
   <body>
-    <h1>Welcome to my 3D website</h1>
+    <div>
+      <Navigation />
+    </div>
     <div class="cursor">
       <Cursor client:load />
+    </div>
+    <div class="animatedeText">
+      <AnimatedText client:load firstName="Sajak" lastName="Shrestha" />
     </div>
     <div id="three-container">
       <ThreeDModal client:load />
@@ -24,7 +31,7 @@ import Cursor from "../Three/Cursor";
     text-align: center;
   }
 
-  .cursor {
-    background-color: red;
+  .animatedeText {
+    margin-bottom: 5rem;
   }
 </style>
