@@ -2,7 +2,7 @@
 import ThreeDModal from "../Three/Three";
 import Cursor from "../Three/Cursor";
 import AnimatedText from "../Three/AnimatedText/AnimatedText";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation/Navigation";
 ---
 
 <html>
@@ -12,7 +12,7 @@ import Navigation from "./Navigation";
   <body>
     <div class="hero-section-grid">
       <div>
-        <Navigation />
+        <Navigation client:load />
       </div>
       <div class="cursor">
         <Cursor client:load />
@@ -20,7 +20,7 @@ import Navigation from "./Navigation";
       <div>
         <div class="loader"></div>
         <div class="animatedeText">
-          <AnimatedText client:load firstName="Sajak" lastName="Ritika" />
+          <AnimatedText client:load firstName="Sajak" lastName="Shrestha" />
         </div>
       </div>
     </div>
@@ -56,5 +56,6 @@ import Navigation from "./Navigation";
   .hero-section-grid {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
+    width: 100vw;
   }
 </style>

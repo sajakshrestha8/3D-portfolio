@@ -1,22 +1,54 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-// import { TextPlugin } from "gsap/TextPlugin";
+import "./AnimatedQuote.css";
 
 const AnimatedQuote = () => {
   useEffect(() => {
-    gsap.registerPlugin(TextPlugin);
-    gsap.to(".letter", {
-      duration: 3,
-      text: "Ma Sajak ho hai",
-      repeat: 0,
-      delay: 0.5,
+    import("gsap/TextPlugin").then((TextPlugin) => {
+      gsap.registerPlugin(TextPlugin);
+
+      gsap.to(".typeWritierText", {
+        duration: 5,
+        text: "Console hudai xa",
+        repeat: 0,
+        delay: 0.5,
+      });
+
+      gsap.to(".typeWritierText1", {
+        duration: 5,
+        text: "Please wait I am investigating",
+        repeat: 0,
+        delay: 0.5,
+      });
+
+      gsap.to(".typeWritierText2", {
+        duration: 5,
+        text: "Server is loading ....",
+        repeat: 0,
+        delay: 0.5,
+      });
+      gsap.to(".typeWritierText3", {
+        duration: 5,
+        text: "Quack quack duck is quackinggg",
+        repeat: 0,
+        delay: 0.5,
+      });
     });
   }, []);
 
   return (
     <div style={Styles.wrapper}>
-      <div className="letter" style={Styles.text}>
-        Loading .....
+      <div className="typeWritierText" style={Styles.text}>
+        Loading ...
+      </div>
+      <div className="typeWritierText1" style={Styles.text}>
+        Loading ...
+      </div>
+      <div className="typeWritierText2" style={Styles.text}>
+        Loading ...
+      </div>
+      <div className="typeWritierText3" style={Styles.text}>
+        Loading ...
       </div>
     </div>
   );
@@ -27,12 +59,12 @@ export default AnimatedQuote;
 const Styles = {
   wrapper: {
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "left",
+    alignItems: "left",
+    flexDirection: "column",
   },
   text: {
-    fontSize: "16px",
-    fontFamily: "Arial, sans-serif",
+    fontSize: "12px",
     fontWeight: 500,
     color: "#333",
     textShadow: "1px 1px 5px rgba(0, 0, 0, 0.2)",

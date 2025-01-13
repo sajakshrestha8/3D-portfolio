@@ -1,0 +1,23 @@
+.socialMediaLogo1{
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background: linear-gradient(90deg, white 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: 0% 0;
+    transition: background-position 0.1s ease; 
+}
+
+.socialMediaLogo2{
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    background: linear-gradient(90deg, white 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: 0% 0;
+    transition: background-position 0.1s ease; 
+}
