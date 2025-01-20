@@ -1,8 +1,10 @@
 ---
 import ThreeDModal from "../Three/Three";
 import Cursor from "../Three/Cursor";
-import AnimatedText from "../Three/AnimatedText/AnimatedText";
+import AnimatedText from "../GSAP/AnimatedText/AnimatedText";
 import Navigation from "./Navigation/Navigation";
+import AnimatedBorder from "../GSAP/AnimatedBorder/AnimatedBorder";
+import AboutSection from "./AboutSection/AboutSection";
 ---
 
 <html>
@@ -17,13 +19,15 @@ import Navigation from "./Navigation/Navigation";
       <div class="cursor">
         <Cursor client:load />
       </div>
-      <div>
-        <div class="loader"></div>
+      <div class="animatedName_Wrapper">
+        <div class="loader"><AnimatedBorder /></div>
         <div class="animatedeText">
-          <AnimatedText client:load firstName="Sajak" lastName="Shrestha" />
+          <AnimatedText client:load firstName="SAJAK" lastName="SHRESTHA" />
         </div>
+        <div class="loader"><AnimatedBorder /></div>
       </div>
     </div>
+    <div><AboutSection /></div>
     <div id="three-container">
       <ThreeDModal client:load />
     </div>
@@ -39,7 +43,6 @@ import Navigation from "./Navigation/Navigation";
   }
 
   .animatedeText {
-    margin-bottom: 5rem;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
   }
@@ -55,7 +58,23 @@ import Navigation from "./Navigation/Navigation";
 
   .hero-section-grid {
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
-    width: 100vw;
+    grid-template-rows: 0.5fr 0.6fr 1fr;
+  }
+
+  .animatedName_Wrapper {
+    margin-bottom: 5rem;
   }
 </style>
+
+<!-- <script>
+  const scroll = document.querySelector("hero-section-grid");
+
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  ScrollTrigger.normalizeScroll(true);
+
+  let smoother = ScrollSmoother.create({
+    smooth: 2,
+    effects: true,
+    normalizeScroll: true,
+  });
+</script> -->

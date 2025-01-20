@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Logo from "../../assets/logo-js-svgrepo-com";
-import AnimatedQuote from "../../Three/AnimatedQuote/AnimatedQuote";
+import AnimatedQuote from "../../GSAP/AnimatedQuote/AnimatedQuote";
 import Menu from "../../Three/Menu/Menu";
 import "./Navigation.css";
 import gsap from "gsap";
@@ -99,7 +99,7 @@ const Styles = {
     alignItems: "center",
     justifyContent: "left",
     borderRight: "1px solid black",
-    paddingLeft: "10px",
+    // paddingLeft: "10px",
   },
 
   menu: {

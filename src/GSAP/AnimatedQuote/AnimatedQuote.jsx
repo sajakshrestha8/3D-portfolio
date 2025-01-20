@@ -64,7 +64,7 @@ const Styles = {
     flexDirection: "column",
   },
   text: {
-    fontSize: "12px",
+    fontSize: 12,
     fontWeight: 500,
     color: "#333",
     textShadow: "1px 1px 5px rgba(0, 0, 0, 0.2)",

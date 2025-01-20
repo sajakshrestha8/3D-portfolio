@@ -21,6 +21,7 @@ const Cursor = () => {
     const cursorGeometry = new THREE.CircleGeometry(0.15, 32);
     const cursorMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
     const cursor = new THREE.Mesh(cursorGeometry, cursorMaterial);
+    cursor.visible = false;
     scene.add(cursor);
 
     const planeGeometry = new THREE.PlaneGeometry(10, 10);
@@ -31,6 +32,7 @@ const Cursor = () => {
       opacity: 0.5,
     });
     const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    camera.position.z = 0;
     scene.add(plane);
 
     camera.position.z = 5;
@@ -51,7 +53,10 @@ const Cursor = () => {
       const intersects = raycaster.intersectObject(plane);
 
       if (intersects.length > 0) {
+        cursor.visible = true;
         cursor.position.copy(intersects[0].point);
+      } else {
+        cursor.visible = false;
       }
 
       renderer.render(scene, camera);

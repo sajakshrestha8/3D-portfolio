@@ -63,9 +63,6 @@ export default function AnimatedText(props) {
             )
           )}
       </div>
-      <div>
-        <CrossIcon />
-      </div>
       <div className="word-1" style={Styles.words}>
         {props.lastName
           .split("")
